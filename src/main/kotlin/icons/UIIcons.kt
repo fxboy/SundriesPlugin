@@ -10,6 +10,20 @@ object UIIcons {
     @JvmField
     val Remove: Icon = load("/icons/Remove.svg")
 
+    @JvmField
+    val BaiduIco:Icon = load("/icons/baidu.svg")
+
+    @JvmField
+    val GoogleIco:Icon = load("/icons/Google.svg")
+
+    @JvmField
+    val CsdnIco:Icon = load("/icons/csdn.svg")
+
+    @JvmField
+    val StackoverflowIco:Icon = load("/icons/stackoverflow.svg")
+
+    @JvmField
+    val yuanIco:Icon = load("/icons/yuan.svg")
 
 
     @JvmStatic
