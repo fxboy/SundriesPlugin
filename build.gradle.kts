@@ -2,12 +2,19 @@ plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.6.20"
     id("org.jetbrains.intellij") version "1.7.0"
+    id("org.jetbrains.changelog") version "1.3.1"
+    id("org.jetbrains.qodana") version "0.1.13"
 }
 
 group = "icu.weboys"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    mavenLocal()
+    maven(url = "https://maven.aliyun.com/repository/public")
+    maven(url = "https://maven-central.storage-download.googleapis.com/repos/central/data/")
+    maven(url = "https://repo.eclipse.org/content/groups/releases/")
+    maven(url = "https://www.jetbrains.com/intellij-repository/releases")
     mavenCentral()
 }
 
