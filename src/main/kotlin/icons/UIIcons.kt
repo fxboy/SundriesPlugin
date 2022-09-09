@@ -2,6 +2,8 @@ package icons
 
 import com.intellij.ui.IconManager
 import javax.swing.Icon
+import javax.swing.ImageIcon
+import javax.swing.plaf.IconUIResource
 
 object UIIcons {
     @JvmField
@@ -25,10 +27,28 @@ object UIIcons {
     @JvmField
     val yuanIco:Icon = load("/icons/yuan.svg")
 
+    @JvmField
+    val defaultSearchIco:Icon = load("/icons/default-search.svg")
+
+    @JvmField
+    val BianjiIco:Icon = load("/icons/bianji_o.svg")
+    @JvmField
+    val BianjiNIco:Icon = load("/icons/bianji_n.svg")
+
 
     @JvmStatic
     fun load(path: String): Icon {
-        return IconManager.getInstance().getIcon(path, UIIcons::class.java)
+       if(path.startsWith("[file]")){
+           return loadForPath(path);
+       } else{
+           return IconManager.getInstance().getIcon(path, UIIcons::class.java);
+       }
     }
+
+    @JvmStatic
+    fun loadForPath(path: String): Icon {
+        return ImageIcon(path.replace("[file]",""))
+    }
+
 }
 

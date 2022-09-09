@@ -5,10 +5,10 @@
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Sundries</name>
+    <name>FSundries</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="fanxingitn@outlook.com" url="https://github.com/fxboy/SundriesPlugin.git">Fanxing</vendor>
+    <vendor email="fanxingitn@outlook.com" url="https://github.com/fxboy/SundriesPlugin.git">FanXingxing</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
@@ -22,11 +22,12 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-
+        <applicationService serviceInterface="icu.weboys.sundriesplugin.config.QuickSearchConfig"
+                            serviceImplementation="icu.weboys.sundriesplugin.config.QuickSearchConfig"/>
     </extensions>
 
     <actions>
-        <group popup="true" class="icu.weboys.sundriesplugin.core.quicksearch.QuickSearchGroup" id="quickstart.QuickSearchGroup" text="使用搜索引擎打开" icon="AllIcons.Actions.Search" description="Quick search">
+        <group popup="true" class="icu.weboys.sundriesplugin.core.quicksearch.QuickSearchGroup" id="quickstart.QuickSearchGroup" text="在Web中搜索..." icon="AllIcons.Actions.Search" description="Quick search">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
         </group>

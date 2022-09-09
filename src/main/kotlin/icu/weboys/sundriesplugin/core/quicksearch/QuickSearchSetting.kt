@@ -2,12 +2,10 @@ package icu.weboys.sundriesplugin.core.quicksearch
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.LangDataKeys
-import com.intellij.psi.PsiDirectory
 import icons.ExternalSystemIcons
-import icu.weboys.sundriesplugin.core.quicksearch.ui.QuickSearchSettingUI
+import icu.weboys.sundriesplugin.core.quicksearch.window.QuickSearchSettingUI
 
-class QuickSearchSetting : AnAction("Setting","系统设置啊", ExternalSystemIcons.Task) {
+class QuickSearchSetting : AnAction("设置","新增/修改当前可用搜索引擎网址", ExternalSystemIcons.Task) {
     override fun actionPerformed(e: AnActionEvent) {
         e.project?.let { QuickSearchSettingUI(it).show() };
     }

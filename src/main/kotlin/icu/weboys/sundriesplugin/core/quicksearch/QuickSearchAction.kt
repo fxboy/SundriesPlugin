@@ -2,12 +2,12 @@ package icu.weboys.sundriesplugin.core.quicksearch
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
+import icons.UIIcons
 import icu.weboys.sundriesplugin.util.EditorUtils
 import icu.weboys.sundriesplugin.util.EncodeUtils
 import icu.weboys.sundriesplugin.util.ProjectUtils
-import javax.swing.Icon
 
-class QuickSearchAction(name:String,des:String,url:String,icon:Icon?) : AnAction(name,des,icon){
+class QuickSearchAction(name:String,des:String,url:String,icon:String) : AnAction(name,des,UIIcons.load(icon)){
     var searchUrl = "";
     init {
         searchUrl = url;
