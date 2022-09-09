@@ -6,10 +6,10 @@
 
 在编辑器或控制台选中文本后单击右键,找到 在Web中搜索菜单 选择要使用的搜索引擎，将会使用电脑默认浏览器打开搜索后的网页
 
-![使用](static\qs1.png)
+![使用](https://github.com/fxboy/SundriesPlugin/blob/master/static/qs1.png?raw=true)
 
-![添加新的](static\qs2.jpg)
+![添加新的](https://github.com/fxboy/SundriesPlugin/blob/master/static/qs2.jpg?raw=true)
 
-![添加新的](static\qs3.jpg)
+![添加新的](https://github.com/fxboy/SundriesPlugin/blob/master/static/qs3.jpg?raw=true)
 
 ## 翻译 [计划中]
