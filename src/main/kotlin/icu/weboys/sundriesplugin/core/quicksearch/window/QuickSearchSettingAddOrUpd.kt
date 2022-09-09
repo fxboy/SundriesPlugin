@@ -5,11 +5,13 @@ import com.intellij.openapi.fileChooser.FileChooserDescriptor
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.openapi.ui.Messages
 import icons.ICON
 import icons.UIIcons
 import icu.weboys.sundriesplugin.config.QuickSearchConfig
 import icu.weboys.sundriesplugin.obj.QS
 import java.awt.event.ActionListener
+import java.io.FilenameFilter
 import javax.swing.*
 
 
@@ -38,6 +40,9 @@ class QuickSearchSettingAddOrUpd(_obj: QS?,project: Project): DialogWrapper(proj
         }
         setSize(420,228);
         isResizable = false;
+
+        fileChooserDescriptor.title = "请选择一张16*16的PNG图片";
+
         init();
     }
     override fun createCenterPanel(): JComponent? {
@@ -86,17 +91,17 @@ class QuickSearchSettingAddOrUpd(_obj: QS?,project: Project): DialogWrapper(proj
         formPanel!!.add(s);
         formPanel!!.add(b);
 
-
         val listener = ActionListener {
-            println(it.actionCommand)
             var temp = FileChooser.chooseFiles(fileChooserDescriptor, pjt, null);
             if(temp.isNotEmpty()){
                 icon = temp[0].path;
-//                bt.icon =;
-                (it.source as JButton).icon = UIIcons.load("[file]" + icon!!)
+                if(icon!!.endsWith(".png")){
+                    (it.source as JButton).icon = UIIcons.load(icon!!)
+                }else{
+                    Messages.showMessageDialog(pjt, "请选择一张 大小为 16 * 16 的 png图片", "提示", Messages.getInformationIcon());
+                }
             }
         }
-
         // 添加choose图标事件
         bt.addActionListener(listener);
     }
