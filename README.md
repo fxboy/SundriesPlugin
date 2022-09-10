@@ -1,6 +1,8 @@
-# SundriesPlugin
 
- 功能杂七杂八的 IDEA 插件
+<center>![SundriesPlugin](https://raw.githubusercontent.com/fxboy/SundriesPlugin/53336fd0311e8bb7db02ec97be13d977160e4312/src/main/resources/META-INF/pluginIcon.svg)</center>
+<center>SundriesPlugin</center>
+
+<center> 功能杂七杂八的 IDEA 插件</center>
 
 ## 在Web中搜索 [已完成]
 
@@ -16,5 +18,5 @@
 
 
 
-
+- 
 ps: icons下的svg文件都是在 https://www.iconfont.cn/ 下载
