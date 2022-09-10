@@ -14,11 +14,58 @@
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-        <a href='https://github.com/fxboy/SundriesPlugin.git'>Github</a>
-        <br>
-         <li>在web中搜索<li>
+        <div><a href='https://github.com/fxboy/SundriesPlugin.git'>Github</a></div>
+        <div>
+    <div align="center" dir="auto"><a target="_blank" rel="noopener noreferrer"
+            href="https://github.com/fxboy/SundriesPlugin/blob/master/static/logo.png?raw=true"><img
+                src="https://github.com/fxboy/SundriesPlugin/raw/master/static/logo.png?raw=true"
+                style="max-width: 100%;"></a> </div>
+    <div align="center" dir="auto">SundriesPlugin</div>
+    <div align="center" dir="auto">功能杂七杂八的 IDEA 插件</div>
+    <h2 dir="auto"><a id="user-content-在web中搜索-已完成" class="anchor" aria-hidden="true" href="#在web中搜索-已完成"><svg
+                class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+                </path>
+            </svg></a>在Web中搜索 [已完成]</h2>
+    <p dir="auto">在编辑器或控制台选中文本后单击右键,找到 在Web中搜索菜单 选择要使用的搜索引擎，将会使用电脑默认浏览器打开搜索后的网页</p>
+    <p dir="auto"><a target="_blank" rel="noopener noreferrer"
+            href="https://github.com/fxboy/SundriesPlugin/blob/master/static/qs1.png?raw=true"><img
+                src="https://github.com/fxboy/SundriesPlugin/raw/master/static/qs1.png?raw=true" alt="使用"
+                style="max-width: 100%;"></a></p>
+    <p dir="auto"><a target="_blank" rel="noopener noreferrer"
+            href="https://github.com/fxboy/SundriesPlugin/blob/master/static/qs2.jpg?raw=true"><img
+                src="https://github.com/fxboy/SundriesPlugin/raw/master/static/qs2.jpg?raw=true" alt="添加新的"
+                style="max-width: 100%;"></a></p>
+    <p dir="auto"><a target="_blank" rel="noopener noreferrer"
+            href="https://github.com/fxboy/SundriesPlugin/blob/master/static/qs3.jpg?raw=true"><img
+                src="https://github.com/fxboy/SundriesPlugin/raw/master/static/qs3.jpg?raw=true" alt="添加新的"
+                style="max-width: 100%;"></a></p>
+    <h2 dir="auto"><a id="user-content-翻译-计划中" class="anchor" aria-hidden="true" href="#翻译-计划中"><svg
+                class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+                </path>
+            </svg></a>翻译 [计划中]</h2>
+    <h1 dir="auto"><a id="user-content-说明" class="anchor" aria-hidden="true" href="#说明"><svg
+                class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z">
+                </path>
+            </svg></a>说明</h1>
+    <p dir="auto">icons下的svg文件都是在 <a href="https://www.iconfont.cn/" rel="nofollow">https://www.iconfont.cn/</a> 下载</p></div>]]></description>
+    <change-notes><![CDATA[
+         <ul>
+            <li>v1.0<br>
+               1.新增在web中搜索...
+            </li>
+        </ul>
+    ]]>
+    </change-notes>
 
-    ]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->

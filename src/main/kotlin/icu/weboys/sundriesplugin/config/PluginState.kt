@@ -11,7 +11,7 @@ data class PluginState (
         "Google" to QsObj("Google","https://www.google.com/","https://www.google.com/search?q=%s&ie=UTF-8",ICON.GoogleIco),
         "CSDN" to QsObj("CSDN","成就一亿技术人的技术社区","https://so.csdn.net/so/search?q=%s",ICON.CsdnIco),
         "Stackoverflow" to QsObj("Stackoverflow","全球最大的技术问答网站","https://stackoverflow.com/search?q=%s",ICON.StackoverflowIco),
-        "Bing" to QsObj("Bing","https://cn.bing.com/","https://cn.bing.com/search?q=%s",ICON.StackoverflowIco),
+        "Bing" to QsObj("Bing","https://cn.bing.com/","https://cn.bing.com/search?q=%s",ICON.Bing),
     ),
     var qt: MutableMap<String, String> = mutableMapOf<String,String>()
 )
