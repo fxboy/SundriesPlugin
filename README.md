@@ -3,8 +3,6 @@
 <div align=center>SundriesPlugin</div>
 <div align=center>功能杂七杂八的 IDEA 插件</div>
 
-<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/19902"></iframe>
-<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/19902"></iframe>
 
 ## 在Web中搜索 [已完成]
 
