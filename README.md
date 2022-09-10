@@ -1,7 +1,7 @@
 
-<div style="text-align: center;"><img src="https://github.com/fxboy/SundriesPlugin/blob/master/static/logo.png?raw=true"> </div>
-<div style="text-align: center;"><h1>SundriesPlugin</h1></div>
-<div style="text-align: center;"> 功能杂七杂八的 IDEA 插件</div>
+<div align=center><img src="https://github.com/fxboy/SundriesPlugin/blob/master/static/logo.png?raw=true"> </div>
+<div align=center>SundriesPlugin</div>
+<div align=center>功能杂七杂八的 IDEA 插件</div>
 
 ## 在Web中搜索 [已完成]
 
