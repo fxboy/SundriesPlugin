@@ -13,3 +13,8 @@
 ![添加新的](https://github.com/fxboy/SundriesPlugin/blob/master/static/qs3.jpg?raw=true)
 
 ## 翻译 [计划中]
+
+
+
+
+ps: icons下的svg文件都是在 https://www.iconfont.cn/ 下载

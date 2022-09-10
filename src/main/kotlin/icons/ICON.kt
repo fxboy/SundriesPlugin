@@ -26,4 +26,7 @@ object ICON {
 
     @JvmField
     val defaultSearchIco: String = "/icons/default-search.svg"
+
+    @JvmField
+    val Bing:String = "/icons/Bing.svg"
 }

@@ -3,7 +3,8 @@ package icu.weboys.sundriesplugin.core.quicksearch.window
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import icons.UIIcons
-import icu.weboys.sundriesplugin.config.QuickSearchConfig
+import icu.weboys.sundriesplugin.config.PluginConfig
+import icu.weboys.sundriesplugin.config.QsConfigFactory
 import java.awt.Dimension
 import java.awt.event.MouseAdapter
 import java.awt.event.MouseEvent
@@ -19,7 +20,7 @@ class QuickSearchSettingUI(project:Project): DialogWrapper(project) {
     init {
         setSize(500,400);
         isResizable = false;
-        title = "快捷搜索配置"
+        title = "新增/修改URL"
         tp = project;
         init();
     }
@@ -57,7 +58,7 @@ class QuickSearchSettingUI(project:Project): DialogWrapper(project) {
         button2.addActionListener {
             // 删除事件
             if(list1!!.selectedValue.isNotEmpty()){
-                QuickSearchConfig.getInstance()!!.remove(list1!!.selectedValue);
+                QsConfigFactory.delAnAction(list1!!.selectedValue);
                 update();
             }
 
@@ -66,21 +67,16 @@ class QuickSearchSettingUI(project:Project): DialogWrapper(project) {
         button3.addActionListener {
             tp?.let {
                 if(list1!!.selectedValue.isNotEmpty()){
-                    if(QuickSearchSettingAddOrUpd(QuickSearchConfig.getInstance()!!.objs[list1!!.selectedValue],it).showAndGet()){
+                    if(QuickSearchSettingAddOrUpd(QsConfigFactory.config.getQsConfig()!![list1!!.selectedValue],it).showAndGet()){
                         update();
                     }
                 }
             };
 
         }
-
         panup!!.add(button1);
         panup!!.add(button2);
         panup!!.add(button3);
-
-        for(k in QuickSearchConfig.getInstance()?.objs?.keys!!){
-            actionsList.add(k);
-        }
         list1 = JList();
         scrollPane1 = JScrollPane();
         update();
@@ -99,10 +95,10 @@ class QuickSearchSettingUI(project:Project): DialogWrapper(project) {
     fun update(){
         list1!!.model = object : AbstractListModel<String?>() {
             override fun getSize(): Int {
-                return  QuickSearchConfig.getInstance()?.objNameList!!.size;
+                return  QsConfigFactory.anActionList().size;
             }
             override fun getElementAt(i: Int): String {
-                return QuickSearchConfig.getInstance()?.objNameList!![i];
+                return QsConfigFactory.anActionList()!![i];
             }
         }
     }

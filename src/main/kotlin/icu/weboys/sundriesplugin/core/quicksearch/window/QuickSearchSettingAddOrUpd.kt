@@ -8,21 +8,20 @@ import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.openapi.ui.Messages
 import icons.ICON
 import icons.UIIcons
-import icu.weboys.sundriesplugin.config.QuickSearchConfig
-import icu.weboys.sundriesplugin.obj.QS
+import icu.weboys.sundriesplugin.config.QsConfigFactory
+import icu.weboys.sundriesplugin.core.quicksearch.obj.QsObj
 import java.awt.event.ActionListener
-import java.io.FilenameFilter
 import javax.swing.*
 
 
-class QuickSearchSettingAddOrUpd(_obj: QS?,project: Project): DialogWrapper(project)  {
+class QuickSearchSettingAddOrUpd(_obj: QsObj?,project: Project): DialogWrapper(project)  {
     val fileChooserDescriptor = FileChooserDescriptor(true, false, true, true, false, false)
-    var obj: QS? = null;
+    var obj: QsObj? = null;
     var upt = false;
     var pjt: Project? = null;
-    var txt1 = "";
-    var txt2 = "输入网址(用 '%s' 来代替搜索词)";
-    var txt3 = "";
+    var txt1:String? = "";
+    var txt2:String? = "输入网址(用 '%s' 来代替搜索词)";
+    var txt3:String? = "";
     var icon: String? = ICON.defaultSearchIco;
 
     var t:JTextField? = null;
@@ -106,13 +105,13 @@ class QuickSearchSettingAddOrUpd(_obj: QS?,project: Project): DialogWrapper(proj
         bt.addActionListener(listener);
     }
     override fun doOKAction() {
-        var l = if(upt) QuickSearchConfig.getInstance()!!.upt(t!!.text,t2!!.text,t1!!.text,icon) else QuickSearchConfig.getInstance()!!.add(t!!.text,t2!!.text,t1!!.text,icon);
-
-        if(l.isNotEmpty()){
-            QuickSearchConfig.getInstance()!!.settingJson = l;
-        }else{
-            // 通知失败
-        }
+      //  var l = if(upt) QsConfigFactory!!.addAnAction(t!!.text,t2!!.text,t1!!.text,icon) else QuickSearchConfig.getInstance()!!.add(t!!.text,t2!!.text,t1!!.text,icon);
+       if(upt) icon?.let { QsConfigFactory!!.uptAnAction(t!!.text,t2!!.text,t1!!.text, it) } else  icon?.let { QsConfigFactory!!.addAnAction(t!!.text,t2!!.text,t1!!.text, it) };
+//        if(l.isNotEmpty()){
+//            QuickSearchConfig.getInstance()!!.settingJson = l;
+//        }else{
+//            // 通知失败
+//        }
         super.doOKAction()
     }
 }
