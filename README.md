@@ -3,17 +3,8 @@
 <div align=center>SundriesPlugin</div>
 <div align=center>功能杂七杂八的 IDEA 插件</div>
 
-<script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
-<script>
-  // Please, replace #yourelement with a real element id on your webpage
-  MarketplaceWidget.setupMarketplaceWidget('card', 19902, "#yourelement");
-</script>
-
-<script src="https://plugins.jetbrains.com/assets/scripts/mp-widget.js"></script>
-<script>
-  // Please, replace #yourelement with a real element id on your webpage
-  MarketplaceWidget.setupMarketplaceWidget('install', 19902, "#yourelement");
-</script>
+<iframe width="384px" height="319px" src="https://plugins.jetbrains.com/embeddable/card/19902"></iframe>
+<iframe width="245px" height="48px" src="https://plugins.jetbrains.com/embeddable/install/19902"></iframe>
 
 ## 在Web中搜索 [已完成]
 
