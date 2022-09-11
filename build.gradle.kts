@@ -1,3 +1,4 @@
+
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "1.6.20"
@@ -19,6 +20,9 @@ repositories {
 }
 
 dependencies{
+    implementation("org.jsoup:jsoup:1.15.3")
+    implementation("com.alibaba:fastjson:2.0.12")
+    implementation("com.squareup.okhttp3:okhttp:4.10.0")
 }
 
 // Configure Gradle IntelliJ Plugin
@@ -29,6 +33,10 @@ intellij {
 
     plugins.set(listOf(/* Plugin Dependencies */))
 }
+//
+//compile 'com.squareup.okhttp3:okhttp:3.8.0'
+//compile 'com.squareup.okio:okio:1.12.0'
+
 
 tasks {
     // Set the JVM compatibility versions

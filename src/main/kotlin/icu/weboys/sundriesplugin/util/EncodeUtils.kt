@@ -1,8 +1,10 @@
 package icu.weboys.sundriesplugin.util
 
-import io.netty.handler.codec.base64.Base64Encoder
 import java.nio.charset.Charset
-import java.util.Base64
+import java.security.MessageDigest
+import java.security.NoSuchAlgorithmException
+import java.util.*
+
 
 object EncodeUtils {
     fun urlEncode(str:String):String{
@@ -24,5 +26,25 @@ object EncodeUtils {
 
     fun base64Decode(x:String):String{
         return String(Base64.getDecoder().decode(x),Charset.forName("utf-8"));
+    }
+
+    fun md5x232(str: String): String? {
+        var reStr: String? = null
+        try {
+            val md5 = MessageDigest.getInstance("MD5")
+            val bytes = md5.digest(str.toByteArray())
+            val stringBuffer = StringBuffer()
+            for (b in bytes) {
+                val bt = b.toInt() and 0xff
+                if (bt < 16) {
+                    stringBuffer.append(0)
+                }
+                stringBuffer.append(Integer.toHexString(bt))
+            }
+            reStr = stringBuffer.toString()
+        } catch (e: NoSuchAlgorithmException) {
+            e.printStackTrace()
+        }
+        return reStr
     }
 }
