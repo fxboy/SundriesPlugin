@@ -14,7 +14,10 @@
 
 ![添加新的](https://github.com/fxboy/SundriesPlugin/blob/master/static/qs3.jpg?raw=true)
 
-## 翻译 [计划中]
+## 翻译 [开发中]
+1.翻译配置 （正在写）
+2.百度翻译  (已支持)
+
 
 
 
