@@ -1,6 +1,6 @@
 
 <div align=center><img src="https://github.com/fxboy/SundriesPlugin/blob/master/static/logo.png?raw=true"> </div>
-<div align=center>SundriesPlugin</div>
+<div align=center>FSundries</div>
 <div align=center>功能杂七杂八的 IDEA 插件</div>
 
 
