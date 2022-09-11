@@ -2,6 +2,7 @@ package icu.weboys.sundriesplugin.config
 
 import icons.ICON
 import icu.weboys.sundriesplugin.core.quicksearch.obj.QsObj
+import icu.weboys.sundriesplugin.core.translate.obj.TsObj
 
 data class PluginState (
     var version:String = "",
@@ -13,5 +14,9 @@ data class PluginState (
         "Stackoverflow" to QsObj("Stackoverflow","全球最大的技术问答网站","https://stackoverflow.com/search?q=%s",ICON.StackoverflowIco),
         "Bing" to QsObj("Bing","https://cn.bing.com/","https://cn.bing.com/search?q=%s",ICON.Bing),
     ),
-    var qt: MutableMap<String, String> = mutableMapOf<String,String>()
+    var tslist:MutableMap<String,TsObj> = mutableMapOf<String,TsObj>(
+        "百度翻译" to TsObj(),
+        "谷歌翻译" to TsObj()
+    ),
+    var defTranslate:String = "百度翻译"
 )
