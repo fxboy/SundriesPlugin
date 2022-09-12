@@ -51,7 +51,7 @@ object UIIcons {
         var ft = ImageIcon(imgURL);
         // 大小超过 16*16 或未读取到 使用默认的图标
 
-        if(ft == null || (ft.iconHeight > 16 || ft.iconWidth > 16)){
+        if((ft.iconHeight > 16 || ft.iconWidth > 16)){
             return defaultSearchIco;
         }
 

@@ -31,7 +31,7 @@ abstract class TranslateService(_info: EditorSelectInfo, _obj:TsObj){
     // 临时写入
     var key = "";
 
-    val api = "https://fanyi-api.baidu.com/api/trans/vip/translate";
+    var api = "https://fanyi-api.baidu.com/api/trans/vip/translate";
 
 
     lateinit var project:Project;
