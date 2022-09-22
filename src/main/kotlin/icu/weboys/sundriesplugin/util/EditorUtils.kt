@@ -3,6 +3,7 @@ package icu.weboys.sundriesplugin.util
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.editor.Editor
+import icu.weboys.sundriesplugin.core.quicksearch.window.QuickSearchSettingAddOrUpd
 import icu.weboys.sundriesplugin.pobj.EditorSelectInfo
 import java.awt.MouseInfo
 import java.util.function.Consumer
@@ -33,5 +34,13 @@ object EditorUtils {
     fun getEditorSelectInfoAndAccept(e:AnActionEvent, f:Consumer<EditorSelectInfo>){
         f.accept(EditorSelectInfo(getEditorSelectText(e),
             getEditor(e).selectionModel.selectionStart,getEditor(e).selectionModel.selectionEnd,MouseInfo.getPointerInfo().location,e.project,getEditor(e)))
+    }
+
+    fun isEditorSelectTextDisplay(e:AnActionEvent){
+        var action = false;
+        getEditorSelectText(e)?.let {
+           action = true;
+        };
+        e.presentation.isEnabledAndVisible = action;
     }
 }

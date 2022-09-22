@@ -25,8 +25,11 @@ class ConfigFactory {
     fun getDefTs():String{
         return s!!.defTranslate;
     }
-}
 
+    fun setDefTs(key:String){
+        s!!.defTranslate = key;
+    }
+}
 
 object TsConfigFactory{
     var config = ConfigFactory();
@@ -39,22 +42,24 @@ object TsConfigFactory{
         return config.getTsConfig()[key]!!;
     }
 
-//    fun getService(key:String,project:Project,editor:Editor):TranslateService{
-//        var temp:TranslateService = BaiduTranslate(project,editor, getTsObj(key));
-//        when(key){
-//            "谷歌翻译"-> temp = GoogleTranslate(project,editor, getTsObj(key));
-//        }
-//        return temp;
-//    }
+    fun getList():ArrayList<String>{
+        return ArrayList(config.getTsConfig().keys);
+    }
 
-//    fun getService(project:Project?,editor:Editor):TranslateService{
-//        var key = config.getDefTs();
-//        var temp:TranslateService = BaiduTranslate(project!!,editor, getTsObj(key));
-//        when(key){
-//            // "谷歌翻译"-> temp = BaiduTranslate();
-//        }
-//        return temp;
-//    }
+    // 修改配置
+    fun set(key:String,obj:TsObj){
+        if(config.getTsConfig().containsKey(key)){
+            var t = config.getTsConfig()[key];
+            t!!.def = obj.def;
+            t!!.defrom = obj.defrom;
+            t!!.deto = obj.deto;
+            t!!.appid = obj.appid;
+            t!!.key = obj.key;
+        }else{
+            config.getTsConfig()[key] = obj;
+        }
+        if(obj.def) config.setDefTs(key);
+    }
 
     fun getService(info:EditorSelectInfo):TranslateService{
         var key = config.getDefTs();
